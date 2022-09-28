@@ -10,26 +10,32 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* align-items:center; */
 }
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  position: relative;
+  transition: all 0.5s 0.1s;
 }
 section {
-  padding: 0 15px;
+  padding: 30px 15px;
 }
 
 /* Icons */
 
 .icon-location {
   color: rgb(248, 79, 79);
-  font-size: 2.6rem;
+  font-size: 2.3rem;
   display: flex;
   align-items: center;
   align-items: center;
   height: auto;
+}
+.footer i {
+  font-size: 2rem;
 }
 
 /* HERO SECTION  */
@@ -249,84 +255,238 @@ nav {
 
 /* Get App Section */
 
-.get-app{
-    max-width: 768px;
-    margin: 3rem auto;
-    display: flex;
+.get-app {
+  max-width: 768px;
+  margin: 3rem auto;
+  display: flex;
 }
-.get-app .img-cont img{
-    width: 250px;
+.get-app .img-cont img {
+  width: 250px;
 }
-.get-app__app-cont img{
-    width: 137px;
-    margin: 15px 0 0 0;
+.get-app__app-cont img {
+  width: 137px;
+  margin: 15px 0 0 0;
 }
 
-.get-app h1{
-    font-size: 40px;
-    margin: 0 0 15px;
-    font-weight: 500;
+.get-app h1 {
+  font-size: 40px;
+  margin: 0 0 15px;
+  font-weight: 500;
 }
 .get-app p,
-.get-app label{
-    font-size: 16px;
-    line-height: 2;
-    opacity: 0.8;
+.get-app label {
+  font-size: 16px;
+  line-height: 2;
+  opacity: 0.8;
 }
-.get-app .get-app__radio-cont{
-    width: 225px;
-    display: flex;
-    justify-content:space-between;
-    margin: 25px 0 10px 0;
-    align-content: center;
+.get-app .get-app__radio-cont {
+  width: 225px;
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 0 10px 0;
+  align-content: center;
 }
-.get-app input[type="radio"]{
-    accent-color:red;
+.get-app input[type="radio"] {
+  accent-color: red;
 }
-.get-app label{
-    margin-left: 5px;
+.get-app label {
+  margin-left: 5px;
 }
-.get-app__input-cont input[type="text"]{
-    border: 1.5px solid rgba(0, 0, 0, 0.3);
-    padding: 13px 12px;
-    display: inline-block; 
-    width: 70%;
-    border-radius: 10px;
+.get-app__input-cont input[type="text"] {
+  border: 1.5px solid rgba(0, 0, 0, 0.3);
+  padding: 13px 12px;
+  display: inline-block;
+  width: 70%;
+  border-radius: 10px;
 }
-.get-app__input-cont input[type="submit"]{
-    color: white;
-    background-color: red;
-    padding: 13px 12px;
-    outline: 0px;
-    border: 0.5px solid red;
-    border-radius: 10px;
-    font-size: 16px;
+.get-app__input-cont input[type="submit"] {
+  color: white;
+  background-color: red;
+  padding: 13px 12px;
+  outline: 0px;
+  border: 0.5px solid red;
+  border-radius: 10px;
+  font-size: 16px;
 }
-.get-app__input-cont input[type="text"]:focus{
-    border-color: dodgerblue;
-    outline: none;
+.get-app__input-cont input[type="text"]:focus {
+  border-color: dodgerblue;
+  outline: none;
 }
-.get-app__input-cont{
-    display: flex;
-    gap: 15px;
-    margin: 10px 0 10px 0;
+.get-app__input-cont {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0 10px 0;
 }
-.content-cont{
-    min-width: 400px;
-}
-
-@media screen and (max-width:500px) {
-    .get-app .img-cont{
-        display: none;
-    }
-    .get-app .content-cont{
-        min-width: 100%;
-    }
-    .get-app__input-cont input[type="text"]{
-        width: 100%;
-    }
-    .get-app__input-cont{
-        flex-wrap: wrap;
-    }
+.content-cont {
+  min-width: 400px;
 }
 
+@media screen and (max-width: 500px) {
+  .get-app .img-cont {
+    display: none;
+  }
+  .get-app .content-cont {
+    min-width: 100%;
+  }
+  .get-app__input-cont input[type="text"] {
+    width: 100%;
+  }
+  .get-app__input-cont {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 768px) {
+  .get-app {
+    flex-direction: column;
+  }
+}
+
+/* Country Section*/
+
+.country {
+  width: 100%;
+}
+
+.country-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 50px auto;
+  max-width: 1100px;
+  gap: 1.2rem;
+  justify-content: center;
+}
+.country h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+.country h2{
+  font-size: 2rem;
+  font-weight: 500;
+}
+.country .card {
+  width: 100%;
+  padding: 20px;
+  flex-basis: 100%;
+  border: 1px solid gray;
+
+  border-radius: 10px;
+  background-position: center;
+}
+.country .card:hover{
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  transform: scale(1.01);
+}
+.country i {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+}
+.country p {
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 600px) {
+  .country .card {
+    max-width: 30%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .country .card {
+    min-width: 30%;
+  }
+}
+
+/* FOOTER */
+
+.footer {
+  width: 100%;
+}
+.foot-head img {
+  width: 132px;
+  height: 28px;
+}
+.foot-head span {
+  font-size: 1.8rem;
+  display: inline-block;
+  opacity: 80%;
+}
+.foot-head {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.foot__drop-cont {
+  display: flex;
+  gap: 10px;
+}
+.footer__place-drop,
+.footer__lang-drop {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 5px;
+  width: fit-content;
+}
+.footer h6 {
+  font-size: 16px;
+  margin: 0 0 12px;
+  font-weight: 500;
+}
+.footer a {
+  font-size: 14px;
+  margin: 5px 0;
+  text-decoration: none;
+  display: block;
+  opacity: 0.7;
+}
+.footer a:hover {
+  opacity: 1;
+  color: rgb(48, 47, 47);
+}
+.foot-main {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  max-width: 1100px;
+  flex-basis: 100%;
+  margin: 30px auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer__link-container {
+  width: 150px;
+}
+.footer__link-container img {
+  width: 137px;
+  margin: 10px 0;
+}
+.footer__top-sub-link-container {
+  margin: 0 0 30px;
+}
+.footer .social-link-cont {
+  display: flex;
+  gap: 15px;
+}
+@media screen and (max-content: 768px) {
+  .foot-main {
+    flex-wrap: wrap;
+    flex-basis: 100%;
+  }
+  .footer__link-container {
+    width: 130px;
+  }
+  .footer span {
+    font-size: 15px;
+  }
+  .foot-head {
+    flex-direction: column;
+  }
+  .foot-head i {
+    font-size: 14px;
+  }
+}
