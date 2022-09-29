@@ -483,10 +483,20 @@ nav {
   .footer span {
     font-size: 15px;
   }
-  .foot-head {
-    flex-direction: column;
-  }
   .foot-head i {
     font-size: 14px;
+  }
+}
+@media screen and (max-width:450px) {
+  .foot-head {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media screen and (max-width:350px) {
+  .foot__drop-cont{
+    flex-direction:column;
+    gap: 10px;
+    justify-content:center;
   }
 }
